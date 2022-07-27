@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import TopContainer from "./Component/TopContainer";
+import HeroContainer from "./Component/HeroContainer";
+import SynergyContainer from "./Component/SynergyContainer";
+
+import styled from "styled-components";
+
+const App = () => (
+  <ChessContainer>
+    <BorderContainer>
+      <TopContainer />
+      <Content>
+        <HeroContainer />
+        <SynergyContainer />
+      </Content>
+    </BorderContainer>
+  </ChessContainer>
+);
+
+const ChessContainer = styled.div`
+  margin: 10rem 15rem 15rem 15rem;
+  background-color: rgb(5, 13, 16);
+  border: solid 3px rgb(127, 88, 37);
+`;
+
+const BorderContainer = styled.div`
+  margin: 5px 3px 5px 3px;
+  border: solid 3px rgb(65, 68, 67);
+`;
+
+const Content = styled.div`
+  display: flex;
+`;
 
 export default App;
