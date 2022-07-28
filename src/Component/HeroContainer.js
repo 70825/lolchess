@@ -8,7 +8,7 @@ import TwoCoinHero from "./CoinHero/TwoCoinHero";
 const HeroContainer = () => {
 
     return (
-        <Container className="nonscroll">
+        <Container>
             <OneCoinHero/>
             <TwoCoinHero/>
             <ThreeCoinHero/>

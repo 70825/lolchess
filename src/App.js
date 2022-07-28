@@ -12,7 +12,7 @@ const App = () => (
       <TopContainer />
       <Content>
         <HeroContainer />
-        <SynergyContainer/>
+        <SynergyContainer />
       </Content>
     </BorderContainer>
   </ChessContainer>
@@ -31,6 +31,7 @@ const BorderContainer = styled.div`
 
 const Content = styled.div`
   display: flex;
+  margin-bottom: 20px;
 `;
 
 export default App;
