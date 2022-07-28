@@ -2,16 +2,13 @@ import styled from "styled-components";
 import SelectHeroPortrait from "./SelectHeroPortrait";
 
 
-const SynergyContainer = () => {
-    const selectHero = ["", "", "", "", "", "", "", "", ""];
+const SynergyContainer = (props) => {
 
     return (
         <Container>
             {
-                selectHero.map((items) => (
-                    <SelectHeroPortrait>
-                        {items}
-                    </SelectHeroPortrait>
+                props.items.map((item) => (
+                    <SelectHeroPortrait src={item !== "" ? "/Icon/" + item + ".png": "/Icon/blank.png"} style={{cursor: "pointer"}}/>
                 ))
             }
         </Container>

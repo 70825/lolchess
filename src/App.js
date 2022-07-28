@@ -5,18 +5,29 @@ import HeroContainer from "./Component/HeroContainer";
 import SynergyContainer from "./Component/SynergyContainer";
 
 import styled from "styled-components";
+import { useState } from "react";
 
-const App = () => (
-  <ChessContainer>
+const App = () => {
+  const [selectHeroList, setSelectHeroList] = useState(["", "", "", "", "", "", "", "", ""]);
+
+  const setClearHandler = () => {
+    setSelectHeroList(() => {
+      return ["", "", "", "", "", "", "", "", ""];
+    })
+  }
+
+  return (
+    <ChessContainer>
     <BorderContainer>
-      <TopContainer />
+      <TopContainer onClear={setClearHandler} />
       <Content>
         <HeroContainer />
-        <SynergyContainer />
+        <SynergyContainer items={selectHeroList} />
       </Content>
     </BorderContainer>
   </ChessContainer>
-);
+  );
+};
 
 const ChessContainer = styled.div`
   margin: 5rem 10rem 10rem 10rem;
