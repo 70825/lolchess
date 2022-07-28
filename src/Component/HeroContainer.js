@@ -1,15 +1,39 @@
 import styled from "styled-components";
+import FiveCoinHero from "./CoinHero/FiveCoinHero";
+import FourCoinHero from "./CoinHero/FourCoinHero";
+import OneCoinHero from "./CoinHero/OneCoinHero";
+import ThreeCoinHero from "./CoinHero/ThreeCoinHero";
+import TwoCoinHero from "./CoinHero/TwoCoinHero";
 
-const HeroContainer = () => (
-    <Container>
-        
-    </Container>
-); 
+const HeroContainer = () => {
+
+    return (
+        <Container className="nonscroll">
+            <OneCoinHero/>
+            <TwoCoinHero/>
+            <ThreeCoinHero/>
+            <FourCoinHero/>
+            <FiveCoinHero/>
+        </Container>
+    );
+}; 
 
 const Container = styled.div`
+    display: flex;
+    flex-wrap:wrap;
+    padding-left: 40px;
+    padding-right: 20px;
     width: 50%;
-    background-color: gray;
-    height: 200px;
-`
+    height: 500px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & {
+        -ms-overflow-style: none;
+    }
+`;
 
 export default HeroContainer;

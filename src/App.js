@@ -12,14 +12,14 @@ const App = () => (
       <TopContainer />
       <Content>
         <HeroContainer />
-        <SynergyContainer />
+        <SynergyContainer/>
       </Content>
     </BorderContainer>
   </ChessContainer>
 );
 
 const ChessContainer = styled.div`
-  margin: 10rem 15rem 15rem 15rem;
+  margin: 5rem 10rem 10rem 10rem;
   background-color: rgb(5, 13, 16);
   border: solid 3px rgb(127, 88, 37);
 `;

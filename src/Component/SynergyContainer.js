@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 const SynergyContainer = () => (
     <Container>
-
     </Container>
 );
 
 const Container = styled.div`
+    display: flex;
+    flex-wrap: wrap;
     width: 50%;
-    background-color: gray;
-    height: 200px;
+    padding: 0 40px 0 40px;
 `;
 
 export default SynergyContainer;
