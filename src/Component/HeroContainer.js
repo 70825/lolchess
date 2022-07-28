@@ -1,19 +1,24 @@
 import styled from "styled-components";
-import FiveCoinHero from "./CoinHero/FiveCoinHero";
-import FourCoinHero from "./CoinHero/FourCoinHero";
-import OneCoinHero from "./CoinHero/OneCoinHero";
-import ThreeCoinHero from "./CoinHero/ThreeCoinHero";
-import TwoCoinHero from "./CoinHero/TwoCoinHero";
+import CoinHero from "./CoinHero/CoinHero";
 
 const HeroContainer = () => {
 
+    const coinHeroList = [["Sejuani", "Ezreal", "TahmKench", "Nidalee", "Senna", "Heimerdinger", 
+                            "Sett", "Aatrox", "Skarner", "Karma", "Leona", "Taric", "Vladimir"],
+                            ["Ashe", "Braum", "Gnar", "Jinx", "Kayn", "Lillia", 
+                            "Nami", "Qiyana", "Shen", "Thresh", "Tristana", "Twitch", "Yone"],
+                            ["Anivia", "Diana", "Elise", "Illaoi", "LeeSin", "Lulu",
+                            "Nunu", "Olaf", "Ryze", "Swain", "Sylas", "Varus","Volibear"],
+                            ["Corki", "Daeja", "Hecarim", "Idas", "Neeko", "Ornn", 
+                            "ShiOhYu", "Sona", "Syfen", "Talon", "Xayah"],
+                            ["AoShin", "AurelionSol", "Bard", "Pyke", "Shyvana", "Yasuo", "Zoe"]
+                        ];
+
     return (
         <Container>
-            <OneCoinHero/>
-            <TwoCoinHero/>
-            <ThreeCoinHero/>
-            <FourCoinHero/>
-            <FiveCoinHero/>
+            {coinHeroList.map((heroList, index) => (
+                <CoinHero number={index+1} heroes={heroList}/>
+            ))}
         </Container>
     );
 }; 
