@@ -13,8 +13,8 @@ const FourCoinHero = () => {
             <CoinHeroTopBar onTitle={"4단계"} onGold={"4"}/>
             <div>
                 {
-                    oneCoinIcon.map((hero) => (
-                        <CoinHeroPortrait src={pictureURL + hero + ".png"}/>
+                    oneCoinIcon.map((hero, index) => (
+                        <CoinHeroPortrait key={index} src={pictureURL + hero + ".png"}/>
                     ))
                 }
             </div>

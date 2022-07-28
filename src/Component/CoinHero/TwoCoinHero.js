@@ -13,8 +13,8 @@ const TwoCoinHero = () => {
             <CoinHeroTopBar onTitle={"2단계"} onGold={"2"}/>
             <div>
                 {
-                    oneCoinIcon.map((hero) => (
-                        <CoinHeroPortrait src={pictureURL + hero + ".png"}/>
+                    oneCoinIcon.map((hero, index) => (
+                        <CoinHeroPortrait key={index} src={pictureURL + hero + ".png"}/>
                     ))
                 }
             </div>
