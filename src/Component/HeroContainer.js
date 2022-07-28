@@ -17,7 +17,7 @@ const HeroContainer = () => {
     return (
         <Container>
             {coinHeroList.map((heroList, index) => (
-                <CoinHero number={index+1} heroes={heroList}/>
+                <CoinHero key={index} number={index+1} heroes={heroList}/>
             ))}
         </Container>
     );

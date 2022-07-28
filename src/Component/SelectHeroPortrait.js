@@ -7,6 +7,11 @@ const SelectHeroPortrait = styled.img`
     margin: 5px 5px 5px 5px;
     padding: 5px 5px 5px 5px;
     object-fit:cover;
+
+    @media screen and (min-width: 1537px){
+        width: 25%;
+        height: auto;
+      }
 `
 
 export default SelectHeroPortrait;
