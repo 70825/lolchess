@@ -35,7 +35,18 @@ const SynergyList = (props) => {
             }
         }
     }
-    
+
+    const sortValue = {
+        "darken": 1,
+        "bronze": 2,
+        "silver": 3,
+        "gold": 4,
+        "chromatic": 5
+    }
+    applySynergyList.sort(function(a, b) {
+        if (sortValue[a[1]] >= sortValue[b[1]]) return -1;
+        else return 1;
+    })
 
     return (
         <Container>
