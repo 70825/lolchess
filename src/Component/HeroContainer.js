@@ -86,6 +86,7 @@ const HeroContainer = (props) => {
           key={index}
           number={index + 1}
           heroes={heroList}
+          items={props.items}
           onClickAddHero={clickAddHeroHandler}
         />
       ))}
