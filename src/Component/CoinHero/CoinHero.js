@@ -10,7 +10,7 @@ const CoinHero = (props) => {
             <div>
                 {
                     props.heroes.map((hero, index) => (
-                        <CoinHeroPortrait key={index} src={"/Icon/" + hero + ".png"}/>
+                        <CoinHeroPortrait key={index} src={"/Icon/" + hero + ".png"} onClick={() => props.onClickAddHero(hero)}/>
                     ))
                 }
             </div>

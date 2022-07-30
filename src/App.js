@@ -23,7 +23,7 @@ const App = () => {
     <BorderContainer>
       <TopContainer onClear={setClearHandler} />
       <Content>
-        <HeroContainer />
+        <HeroContainer items={selectHeroList} onChangeHeroList={heroChangeHandler}/>
         <SynergyContainer items={selectHeroList} onChangeHeroList={heroChangeHandler}/>
       </Content>
     </BorderContainer>

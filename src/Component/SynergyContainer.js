@@ -2,11 +2,13 @@ import styled from "styled-components";
 import SelectHeroPortrait from "./SelectHeroPortrait";
 
 const SynergyContainer = (props) => {
-  const setRemoveHero = (name) => {
+  const onClickRemoveHero = (name) => {
     const newHeroList = [];
     props.items.forEach((heroName) => {
       if (name === heroName) newHeroList.push("");
-      else newHeroList.push(heroName);
+      else {
+        newHeroList.push(heroName);
+      }
     });
     props.onChangeHeroList(newHeroList);
   };
@@ -18,7 +20,7 @@ const SynergyContainer = (props) => {
           key={index}
           src={item !== "" ? "/Icon/" + item + ".png" : "/Icon/blank.png"}
           style={{ cursor: "pointer" }}
-          onClick={() => setRemoveHero(item)}
+          onClick={() => onClickRemoveHero(item)}
         />
       ))}
     </Container>
