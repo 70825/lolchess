@@ -68,6 +68,8 @@ const HeroContainer = (props) => {
     const newHeroList = [];
     var flag = false;
 
+    if (props.items.includes(name)) flag = true;
+
     for(var i = 0; i < 9; i++){
         if (props.items[i] === "" && flag === false) {
             newHeroList.push(name);
