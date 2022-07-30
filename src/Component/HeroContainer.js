@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CoinHero from "./CoinHero/CoinHero";
+import CoinHero from "./Hero/CoinHero";
 
 const HeroContainer = (props) => {
   const coinHeroList = [
@@ -100,15 +100,15 @@ const Container = styled.div`
   padding-left: 40px;
   padding-right: 20px;
   width: 50%;
-  height: 500px;
+  height: 480px;
   overflow: auto;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  & {
-    -ms-overflow-style: none;
+  @media screen and (min-width: 1537px) {
+    height: 600px;
   }
 `;
 

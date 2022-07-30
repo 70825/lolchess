@@ -6,42 +6,58 @@ import styled from "styled-components";
 import { useState } from "react";
 
 const App = () => {
-  const [selectHeroList, setSelectHeroList] = useState(["", "", "", "", "", "", "", "", ""]);
+  const [selectHeroList, setSelectHeroList] = useState([
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ]);
 
   const setClearHandler = () => {
     setSelectHeroList(() => {
       return ["", "", "", "", "", "", "", "", ""];
-    })
-  }
+    });
+  };
 
   const heroChangeHandler = (newHeroList) => {
     setSelectHeroList(newHeroList);
   };
 
   return (
-  <ChessContainer>
-    <BorderContainer>
-      <TopContainer onClear={setClearHandler} />
-      <Content>
-        <HeroContainer items={selectHeroList} onChangeHeroList={heroChangeHandler}/>
-        <SynergyContainer items={selectHeroList} onChangeHeroList={heroChangeHandler}/>
-      </Content>
-    </BorderContainer>
-  </ChessContainer>
+    <ChessContainer>
+      <BorderContainer>
+        <TopContainer onClear={setClearHandler} />
+        <Content>
+          <HeroContainer
+            items={selectHeroList}
+            onChangeHeroList={heroChangeHandler}
+          />
+          <SynergyContainer
+            items={selectHeroList}
+            onChangeHeroList={heroChangeHandler}
+          />
+        </Content>
+      </BorderContainer>
+    </ChessContainer>
   );
 };
 
 const ChessContainer = styled.div`
   position: absolute;
   width: 1216px;
-  height: 644.4px;
-  margin: 5rem 5% 5rem 10%;
+  height: 710Spx;
+  margin: 3% 5% 0% 10%;
   background-color: rgb(5, 13, 16);
   border: solid 3px rgb(127, 88, 37);
 
-  @media screen and (min-width: 1537px){
+  @media screen and (min-width: 1537px) {
     width: 1600px;
-    height: 800px;
+    height: 880px;
   }
 `;
 
@@ -49,14 +65,15 @@ const BorderContainer = styled.div`
   margin: 5px 3px 5px 3px;
   border: solid 3px rgb(65, 68, 67);
 
-  @media screen and (min-width: 1537px){
+  @media screen and (min-width: 1537px) {
     width: 1600px;
-    height: 785px;
+    height: 865px;
   }
 `;
 
 const Content = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 `;
 

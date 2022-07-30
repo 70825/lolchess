@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SelectHeroPortrait from "./SelectHeroPortrait";
+import SynergyList from "./Synergy/SynergyList";
 
 const SynergyContainer = (props) => {
   const onClickRemoveHero = (name) => {
@@ -14,18 +15,27 @@ const SynergyContainer = (props) => {
   };
 
   return (
-    <Container>
-      {props.items.map((item, index) => (
-        <SelectHeroPortrait
-          key={index}
-          src={item !== "" ? "/Icon/" + item + ".png" : "/Icon/blank.png"}
-          style={{ cursor: "pointer" }}
-          onClick={() => onClickRemoveHero(item)}
-        />
-      ))}
-    </Container>
+    <AllContainer>
+      <Container>
+        {props.items.map((item, index) => (
+          <SelectHeroPortrait
+            key={index}
+            src={item !== "" ? "/HeroIcon/" + item + ".png" : "/HeroIcon/blank.png"}
+            style={{ cursor: "pointer" }}
+            onClick={() => onClickRemoveHero(item)}
+          />
+        ))}
+      </Container>
+      <SynergyList items={props.items}/>
+    </AllContainer>
   );
 };
+
+const AllContainer = styled.div`
+    width: 50%;
+    height: 100%;
+`
+
 
 const Container = styled.div`
   display: grid;
@@ -33,8 +43,7 @@ const Container = styled.div`
   grid-template-rows: repeat(3, 30%);
   row-gap: 10px;
   column-gap: 10px;
-
-  width: 50%;
+  
   padding: 0 40px 0 50px;
 
   @media screen and (min-width: 1537px) {
