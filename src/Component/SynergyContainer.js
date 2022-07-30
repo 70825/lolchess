@@ -28,13 +28,18 @@ const SynergyContainer = (props) => {
 };
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 30%);
+  row-gap: 10px;
+  column-gap: 10px;
+
   width: 50%;
   padding: 0 40px 0 50px;
 
   @media screen and (min-width: 1537px) {
+    padding-left: 70px;
+    column-gap: 0px;
   }
 `;
 

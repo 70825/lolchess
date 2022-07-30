@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { useState } from "react";
 
 const App = () => {
-  const [selectHeroList, setSelectHeroList] = useState(["AoShin", "AurelionSol", "Bard", "Pyke", "Shyvana", "Yasuo", "Zoe", "", ""]);
+  const [selectHeroList, setSelectHeroList] = useState(["", "", "", "", "", "", "", "", ""]);
 
   const setClearHandler = () => {
     setSelectHeroList(() => {

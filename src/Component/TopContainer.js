@@ -17,6 +17,10 @@ const Container = styled.div`
     height: 20%;
     width: 100%;
     margin-bottom: 1rem;
+
+    @media screen and (min-width: 1537px) {
+        margin-bottom: 0rem;
+    }
 `
 
 const TeamContainer = styled.div`
@@ -31,6 +35,10 @@ const TeamContainer = styled.div`
 const ClearContainer = styled.div`
     padding-top: 1rem;
     margin: auto;
+
+    @media screen and (min-width: 1537px) {
+        padding-right: 3rem;
+    }
 `;
 
 const ClearButton = styled.button`

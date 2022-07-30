@@ -9,8 +9,8 @@ const SelectHeroPortrait = styled.img`
     object-fit:cover;
 
     @media screen and (min-width: 1537px){
-        width: 25%;
-        height: auto;
+        width: 190px;
+        height: 190px;
       }
 `
 
