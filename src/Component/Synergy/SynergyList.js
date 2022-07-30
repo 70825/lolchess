@@ -26,9 +26,8 @@ const SynergyList = (props) => {
         if(!flag) applySynergyList.push([1, "darken", synergyName]); 
     })
 
+    console.log(applySynergyList);
     for(let i = 0; i < applySynergyList.length; i++) {
-        console.log(applySynergyList[i]);
-        console.log(SynergyInfo[applySynergyList[i][2]]);
         for(let j = 0; j < SynergyInfo[applySynergyList[i][2]].length; j++) {
             if (applySynergyList[i][0] >= SynergyInfo[applySynergyList[i][2]][j][0]){
                 applySynergyList[i][1] = SynergyInfo[applySynergyList[i][2]][j][1];
@@ -63,9 +62,15 @@ const SynergyList = (props) => {
 
 const Container = styled.div`
     display: flex;
-    height: 55px;
-    width: 100%;
-    padding-left: 70px;
+    width: 83%;
+    margin-left: 50px;
+    overflow: hidden;
+
+    @media screen and (min-width: 1537px) {
+        height: 55px;
+        width: 75.5%;
+        margin-left: 75px;
+    }
 `;
 
 const SynergyIconContainter = styled.div`

@@ -50,8 +50,8 @@ const App = () => {
 const ChessContainer = styled.div`
   position: absolute;
   width: 1216px;
-  height: 710Spx;
-  margin: 3% 5% 0% 10%;
+  height: 740px;
+  margin: 2% 5% 0% 10%;
   background-color: rgb(5, 13, 16);
   border: solid 3px rgb(127, 88, 37);
 
@@ -64,6 +64,7 @@ const ChessContainer = styled.div`
 const BorderContainer = styled.div`
   margin: 5px 3px 5px 3px;
   border: solid 3px rgb(65, 68, 67);
+  height: 98.7%;
 
   @media screen and (min-width: 1537px) {
     width: 1600px;
