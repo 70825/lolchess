@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import SelectHeroPortrait from "./SelectHeroPortrait";
 import SynergyList from "./Synergy/SynergyList";
+import HeroStageInfo from "./Info/HeroStageInfo";
+
 
 const SynergyContainer = (props) => {
   const onClickRemoveHero = (name) => {
@@ -14,6 +16,12 @@ const SynergyContainer = (props) => {
     props.onChangeHeroList(newHeroList);
   };
 
+  const borderColor = ["gray", "rgb(49, 152, 76)", "rgb(43, 85, 134)", "rgb(171, 76, 180)", "rgb(198, 168, 96)"];
+
+  const filterHeroBorder = (heroName) => {
+    return "solid 3px " + borderColor[HeroStageInfo[heroName]-1];
+  }
+
   return (
     <AllContainer>
       <Container>
@@ -21,7 +29,7 @@ const SynergyContainer = (props) => {
           <SelectHeroPortrait
             key={index}
             src={item !== "" ? "/HeroIcon/" + item + ".png" : "/HeroIcon/blank.png"}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", border: filterHeroBorder(item)}}
             onClick={() => onClickRemoveHero(item)}
           />
         ))}

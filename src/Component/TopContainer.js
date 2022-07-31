@@ -16,11 +16,6 @@ const Container = styled.div`
     justify-content: space-between;
     height: 20%;
     width: 100%;
-    margin-bottom: 1rem;
-
-    @media screen and (min-width: 1537px) {
-        margin-bottom: 0rem;
-    }
 `
 
 const TeamContainer = styled.div`
