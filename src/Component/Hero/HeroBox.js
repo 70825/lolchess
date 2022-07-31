@@ -44,6 +44,7 @@ const HeroPortrait = styled.img`
 
     &:hover {
         cursor: pointer;
+        box-shadow: 0px 0px 20px 10px rgba(198, 168, 96, 0.6);
     }
 
     @media screen and (min-width: 1537px){

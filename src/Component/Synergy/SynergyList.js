@@ -23,13 +23,15 @@ const SynergyList = (props) => {
                 applySynergyList[i][0] += 1;
             }
         }
-        if(!flag) applySynergyList.push([1, "darken", synergyName]); 
+        if(!flag) applySynergyList.push([1, "darken", synergyName, SynergyInfo[synergyName][0][0]]); 
     })
 
     for(let i = 0; i < applySynergyList.length; i++) {
         for(let j = 0; j < SynergyInfo[applySynergyList[i][2]].length; j++) {
             if (applySynergyList[i][0] >= SynergyInfo[applySynergyList[i][2]][j][0]){
                 applySynergyList[i][1] = SynergyInfo[applySynergyList[i][2]][j][1];
+                if(SynergyInfo[applySynergyList[i][2]].length - 1 >= j + 1) applySynergyList[i][3] = SynergyInfo[applySynergyList[i][2]][j+1][0];
+                if(applySynergyList[i][2] === "Dragons") applySynergyList[i][3] = 1;
             }
         }
     }
@@ -52,6 +54,7 @@ const SynergyList = (props) => {
                 <SynergyIconContainter key={index}>
                     <SynergyIcon trait={heroList[2]}/>
                     <SynergyBackgroundIcon item={heroList[1]}/>
+                    <div style={{color: "white", textAlign: "center"}}> {heroList[0]} / {heroList[3]}</div>
                 </SynergyIconContainter>
             ))}
             
@@ -62,6 +65,7 @@ const SynergyList = (props) => {
 const Container = styled.div`
     display: flex;
     width: 83%;
+    height: 80px;
     margin-left: 50px;
     overflow: hidden;
 
