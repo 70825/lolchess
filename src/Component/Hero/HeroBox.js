@@ -2,6 +2,8 @@ import styled from "styled-components";
 import HeroTopBar from "./HeroTopBar";
 
 const HeroBox = (props) => {
+  const borderColor = ["gray", "rgb(49, 152, 76)", "rgb(43, 85, 134)", "rgb(171, 76, 180)", "rgb(198, 168, 96)"];
+
   const selectedHero = (name) => {
     if (props.items.includes(name)) return "grayscale(100%)";
     else return "";
@@ -18,7 +20,7 @@ const HeroBox = (props) => {
           <HeroPortrait
             key={index}
             src={"/HeroIcon/" + hero + ".png"}
-            style={{filter: selectedHero(hero)}}
+            style={{filter: selectedHero(hero), border: "solid 2px " + borderColor[props.number - 1]}}
             onClick={() => props.onClickAddHero(hero)}
           />
         ))}
@@ -35,7 +37,6 @@ const Container = styled.div`
 `;
 
 const HeroPortrait = styled.img`
-    border: solid 2px gray;
     width: 16%;
     height: auto;
     margin: 10px 10px 10px 10px;
