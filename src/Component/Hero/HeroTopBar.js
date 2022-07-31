@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CoinHeroTopBar = (props) => {
+const HeroTopBar = (props) => {
     return (
         <Container>
             <div>{props.onTitle}</div>
@@ -19,4 +19,4 @@ const Container = styled.div`
     font-weight: 600;
 `;
 
-export default CoinHeroTopBar;
+export default HeroTopBar;

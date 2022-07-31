@@ -50,7 +50,7 @@ const HeroSynergyInfo = {
     "Pyke": ["Assassin", "Whispers"],
     "Soraka": ["Starcaller", "Jade"],
     "Yasuo": ["Dragonmancer", "Mirage", "Warrior"],
-    "Zoe": ["Spell Thief", "Mage", "Shimmerscale"],
+    "Zoe": ["Spellthief", "Mage", "Shimmerscale"],
     "Daeja": ["Dragons", "Mirage"],
     "Idas": ["Dragons", "Shimmerscale"],
     "ShiOhYu": ["Dragons", "Jade", "Mystic"],

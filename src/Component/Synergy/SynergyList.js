@@ -26,7 +26,6 @@ const SynergyList = (props) => {
         if(!flag) applySynergyList.push([1, "darken", synergyName]); 
     })
 
-    console.log(applySynergyList);
     for(let i = 0; i < applySynergyList.length; i++) {
         for(let j = 0; j < SynergyInfo[applySynergyList[i][2]].length; j++) {
             if (applySynergyList[i][0] >= SynergyInfo[applySynergyList[i][2]][j][0]){

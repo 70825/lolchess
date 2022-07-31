@@ -23,7 +23,7 @@ const SynergyInfo = {
     "Mage": [[3, "bronze"], [5, "silver"], [7, "gold"], [9, "chromatic"]],
     "Mystic": [[2, "bronze"], [3, "silver"], [4, "gold"], [5, "chromatic"]],
     "Shapeshifter": [[2, "bronze"], [4, "silver"], [6, "gold"]],
-    "Spell Thief": [[1, "gold"]],
+    "Spellthief": [[1, "gold"]],
     "Starcaller": [[1, "gold"]],
     "Swiftshot": [[2, "bronze"], [4, "gold"], [6, "chromatic"]],
     "Warrior": [[2, "bronze"], [4, "gold"], [6, "chromatic"]]

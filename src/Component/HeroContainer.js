@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CoinHero from "./Hero/CoinHero";
+import HeroBox from "./Hero/HeroBox";
 
 const HeroContainer = (props) => {
   const coinHeroList = [
@@ -82,7 +82,7 @@ const HeroContainer = (props) => {
   return (
     <Container>
       {coinHeroList.map((heroList, index) => (
-        <CoinHero
+        <HeroBox
           key={index}
           number={index + 1}
           heroes={heroList}

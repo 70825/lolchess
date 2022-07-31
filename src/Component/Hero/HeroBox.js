@@ -1,8 +1,7 @@
-import CoinHeroPortrait from "./CoinHeroPortrait";
-import CoinHeroTopBar from "./CoinHeroTopBar";
 import styled from "styled-components";
+import HeroTopBar from "./HeroTopBar";
 
-const CoinHero = (props) => {
+const HeroBox = (props) => {
   const selectedHero = (name) => {
     if (props.items.includes(name)) return "grayscale(100%)";
     else return "";
@@ -10,13 +9,13 @@ const CoinHero = (props) => {
 
   return (
     <Container>
-      <CoinHeroTopBar
+      <HeroTopBar
         onTitle={props.number.toString() + "단계"}
         onGold={props.number.toString()}
       />
       <div>
         {props.heroes.map((hero, index) => (
-          <CoinHeroPortrait
+          <HeroPortrait
             key={index}
             src={"/HeroIcon/" + hero + ".png"}
             style={{filter: selectedHero(hero)}}
@@ -35,4 +34,21 @@ const Container = styled.div`
     padding: 5px 5px 5px 15px;
 `;
 
-export default CoinHero;
+const HeroPortrait = styled.img`
+    border: solid 2px gray;
+    width: 16%;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 1537px){
+        width: 17%;
+        height: auto;
+      }
+`;
+
+export default HeroBox;
