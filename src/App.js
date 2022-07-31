@@ -57,7 +57,7 @@ const ChessContainer = styled.div`
 
   @media screen and (min-width: 1537px) {
     width: 1600px;
-    height: 880px;
+    height: 930px;
   }
 `;
 
@@ -68,7 +68,7 @@ const BorderContainer = styled.div`
 
   @media screen and (min-width: 1537px) {
     width: 1600px;
-    height: 865px;
+    height: 915px;
   }
 `;
 

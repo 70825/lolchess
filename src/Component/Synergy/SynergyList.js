@@ -70,7 +70,7 @@ const Container = styled.div`
     overflow: hidden;
 
     @media screen and (min-width: 1537px) {
-        height: 55px;
+        height: 90px;
         width: 75.5%;
         margin-left: 75px;
     }
